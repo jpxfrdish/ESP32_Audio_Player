@@ -11,5 +11,8 @@
       "--background-index",
       "--query-driver=**",
       "--compile-commands-dir=c:\\Users\\angel\\ESP32_Audio_Player\\build"
-    ]
+    ],
+    "idf.monitorPort": "COM22",
+    "idf.flashType": "UART",
+    "idf.port": "COM22"
 }
