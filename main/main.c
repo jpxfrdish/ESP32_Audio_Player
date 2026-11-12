@@ -15,8 +15,8 @@ static const char *TAG = "AUDIO_PLAYER";
 static i2s_chan_handle_t tx_handle;
 
 /* Embedded WAV file */
-extern const uint8_t audio_start[] asm("_binary_sample1_wav_start");
-extern const uint8_t audio_end[]   asm("_binary_sample1_wav_end");
+extern const uint8_t audio_start[] asm("_binary_depends_wav_start");
+extern const uint8_t audio_end[]   asm("_binary_depends_wav_end");
 
 static uint16_t read_u16(const uint8_t *p)
 {
@@ -107,7 +107,7 @@ void app_main(void)
         return;
     }
 
-    ESP_LOGI(TAG, "Playing sample1.wav...");
+  ESP_LOGI(TAG, "Playing depends.wav...");
 
     /* Convert mono samples to stereo for the amplifier */
     const int16_t *audio =
